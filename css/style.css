@@ -587,7 +587,7 @@ body {
             background-size: contain;
             background-repeat: no-repeat; }
           .sidebar .widgets .grid .weather__content .temp .deg {
-            font-size: 5vw;
+            font-size: 50px;
             font-family: "Geometria-Thin";
             color: #373737; }
         .sidebar .widgets .grid .weather__content .days {
@@ -743,6 +743,14 @@ body {
       width: 100vw;
       padding: 0 60px; }
 
+  .sidebar .widgets__title {
+    padding: 1vw 50px 30px; }
+    .sidebar .widgets__title::before {
+      width: 30px;
+      height: 30px;
+      top: -0.5vw; }
+  .sidebar .tasks, .sidebar .colleague, .sidebar .question, .sidebar .widgets {
+    margin-bottom: 30px; }
   .sidebar .tasks__title, .sidebar .question__title {
     padding: 8px 50px 20px 50px; }
     .sidebar .tasks__title::before, .sidebar .question__title::before {
