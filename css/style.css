@@ -1,0 +1,780 @@
+@font-face {
+  font-family: "Geometria-Medium";
+  src: url("../fonts/Geometria-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: "Geometria-Light";
+  src: url("../fonts/Geometria-Light.otf") format("opentype"); }
+@font-face {
+  font-family: "Geometria-Bold";
+  src: url("../fonts/Geometria-Bold.otf") format("opentype"); }
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria.otf") format("opentype"); }
+@font-face {
+  font-family: "Geometria-Thin";
+  src: url("../fonts/Geometria-Thin.otf") format("opentype"); }
+body {
+  background-color: #f5f5f5;
+  font-family: "Geometria", sans-serif; }
+
+.container {
+  width: 100%;
+  padding: 0 25px;
+  margin-top: 2.8vw; }
+
+.header {
+  height: 55px; }
+  .header__menu {
+    background-color: #153259;
+    position: relative;
+    z-index: 999; }
+    .header__menu .navbar-toggle {
+      border-color: #97a5b7; }
+      .header__menu .navbar-toggle .icon-bar {
+        background-color: #97a5b7; }
+  .header .navbar {
+    margin-bottom: 0; }
+  .header .navbar-collapse {
+    padding: 0 !important;
+    overflow: hidden;
+    z-index: 999999; }
+    .header .navbar-collapse .nav {
+      font-size: 12px;
+      font-family: "Geometria";
+      color: #97a5b7;
+      padding: 0 25px;
+      width: 65vw;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .header .navbar-collapse .nav .menu__item .link {
+        color: #97a5b7;
+        white-space: nowrap; }
+        .header .navbar-collapse .nav .menu__item .link:hover, .header .navbar-collapse .nav .menu__item .link:focus, .header .navbar-collapse .nav .menu__item .link:active {
+          color: #f5f5f5;
+          background-color: transparent; }
+
+.main #carousel .item {
+  -webkit-transition: 0.7s ease-in-out opacity;
+  transition: 0.7s ease-in-out opacity;
+  left: 0 !important; }
+.main #carousel .next.left, .main #carousel .prev.right {
+  opacity: 1;
+  z-index: 1; }
+.main #carousel .active.left, .main #carousel .active.right {
+  opacity: 0;
+  z-index: 2; }
+.main #carousel .carousel-nav {
+  height: 11vw;
+  width: 50%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 2; }
+.main #carousel .carousel-indicators {
+  bottom: 1vw;
+  left: 70%;
+  width: 115px;
+  padding-left: 0;
+  margin-left: -32%; }
+  .main #carousel .carousel-indicators li {
+    background-color: #97a5b7;
+    border: 0;
+    width: 7px;
+    height: 7px;
+    margin: 4px; }
+    .main #carousel .carousel-indicators li:hover {
+      background-color: #c8c8d4; }
+    .main #carousel .carousel-indicators li:focus {
+      background-color: #1f273c; }
+  .main #carousel .carousel-indicators .active {
+    width: 7px;
+    height: 7px;
+    background-color: #1f273c; }
+.main #carousel .carousel-control {
+  opacity: 1;
+  background-image: none;
+  position: static; }
+  .main #carousel .carousel-control .control {
+    display: block;
+    text-indent: -9999px;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    border-radius: 100px;
+    background-color: #f5f5f5;
+    top: 20%; }
+.main #carousel .left span {
+  -webkit-mask-image: url("../svg/left.svg");
+  mask-image: url("../svg/left.svg");
+  right: 14%; }
+  .main #carousel .left span:hover {
+    -webkit-mask-image: none;
+    mask-image: none;
+    background-color: #1f273c;
+    background-image: url("../svg/left-hover.svg");
+    background-repeat: no-repeat; }
+.main #carousel .right span {
+  -webkit-mask-image: url("../svg/right.svg");
+  mask-image: url("../svg/right.svg");
+  right: 4%; }
+  .main #carousel .right span:hover {
+    -webkit-mask-image: none;
+    mask-image: none;
+    background-color: #1f273c;
+    background-image: url("../svg/right-hover.svg");
+    background-repeat: no-repeat; }
+.main #carousel .item {
+  height: 33.5vw; }
+  .main #carousel .item img {
+    width: 100%;
+    height: auto; }
+  .main #carousel .item .carousel-caption {
+    height: 11vw;
+    width: 50%;
+    padding: 2vw 10vw 3vw 2vw;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #153259;
+    color: #f5f5f5;
+    text-align: left;
+    line-height: 2vw;
+    overflow: hidden; }
+    .main #carousel .item .carousel-caption h3 {
+      font-size: 1.5vw;
+      font-family: "Geometria-Light"; }
+.main .news {
+  background-color: #fff;
+  height: auto;
+  margin: 30px 0;
+  padding: 3.5vw 0; }
+  .main .news .row {
+    margin: 0; }
+  .main .news .n-row {
+    padding: 0 30px;
+    margin-bottom: 35px; }
+  .main .news__title {
+    position: relative;
+    padding: 0 85px 29px;
+    font-family: "Geometria-Bold";
+    color: #153259;
+    font-size: 22px; }
+    .main .news__title::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      background: url("../svg/icon_news.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 41px;
+      top: -5px; }
+  .main .news__item {
+    height: auto;
+    overflow: hidden; }
+    .main .news__item .col-wrap1 {
+      width: 33%; }
+    .main .news__item .col-wrap2 {
+      width: 200%;
+      margin-right: -100%;
+      position: relative;
+      left: 100%; }
+      .main .news__item .col-wrap2 .img {
+        float: left;
+        width: 50%;
+        margin-right: -100%;
+        position: relative;
+        left: -50%; }
+        .main .news__item .col-wrap2 .img img {
+          width: 100%;
+          height: auto; }
+      .main .news__item .col-wrap2 .desc {
+        margin-left: 20px;
+        font-size: 12px; }
+        .main .news__item .col-wrap2 .desc .title {
+          display: block;
+          height: 68px;
+          overflow: hidden;
+          font-family: "Geometria";
+          text-decoration: none; }
+          .main .news__item .col-wrap2 .desc .title > div:nth-child(2) {
+            color: #373737;
+            line-height: 13px;
+            max-height: 40px;
+            overflow: hidden; }
+          .main .news__item .col-wrap2 .desc .title .date {
+            max-height: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 7px;
+            color: #8a8a8a; }
+        .main .news__item .col-wrap2 .desc .social {
+          padding-top: 5px; }
+          .main .news__item .col-wrap2 .desc .social a {
+            color: #8a8a8a;
+            text-decoration: none;
+            padding-left: 20px; }
+            .main .news__item .col-wrap2 .desc .social a:first-child {
+              margin-right: 10px; }
+          .main .news__item .col-wrap2 .desc .social .likes {
+            position: relative; }
+            .main .news__item .col-wrap2 .desc .social .likes::before {
+              content: "";
+              width: 12px;
+              height: 12px;
+              display: inline-block;
+              background: url("../svg/heart.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 0;
+              top: 1px; }
+          .main .news__item .col-wrap2 .desc .social .views {
+            position: relative; }
+            .main .news__item .col-wrap2 .desc .social .views::before {
+              content: "";
+              width: 15px;
+              height: 15px;
+              display: inline-block;
+              background: url("../svg/views.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 0;
+              top: 3px; }
+            .main .news__item .col-wrap2 .desc .social .views:hover::before {
+              background: url("../svg/views-hover.svg");
+              background-repeat: no-repeat; }
+      .main .news__item .col-wrap2 .clear {
+        clear: both;
+        font-size: 0;
+        overflow: hidden; }
+  .main .news__footer .more {
+    padding: 20px 45px; }
+    .main .news__footer .more button {
+      padding-left: 50px;
+      border: 0;
+      background: transparent;
+      outline: none;
+      position: relative;
+      font-size: 14px;
+      color: #8a8a8a;
+      font-family: "Geometria"; }
+      .main .news__footer .more button::before {
+        content: "";
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        background: url("../svg/icon_+.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: -9px; }
+      .main .news__footer .more button:hover::before {
+        background: url("../svg/icon_+hover.svg"); }
+
+.sidebar .tasks {
+  background-color: #2384ce;
+  height: 100%;
+  padding: 5px 0 25px; }
+  .sidebar .tasks__title {
+    font-size: 20px;
+    font-family: "Geometria-Bold";
+    color: #fff;
+    padding: 3vw 4.5vw 2vw;
+    position: relative; }
+    .sidebar .tasks__title::before {
+      content: "";
+      width: 3vw;
+      height: 3vw;
+      display: inline-block;
+      background: url("../svg/to-do-list.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 1vw;
+      top: 2.2vw; }
+  .sidebar .tasks__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .sidebar .tasks__inner .item {
+      width: 33%;
+      font-family: "Geometria-Thin";
+      color: #fff;
+      text-align: center;
+      text-decoration: none; }
+      .sidebar .tasks__inner .item:hover {
+        color: #2f4f7d; }
+    .sidebar .tasks__inner .amount {
+      font-size: 4vw; }
+    .sidebar .tasks__inner .desc {
+      font-size: 12px;
+      padding: 10px 0; }
+  .sidebar .tasks__button {
+    padding: 1vw 1.5vw; }
+    .sidebar .tasks__button button {
+      background-color: #2f4f7d;
+      color: #fff;
+      font-family: "Geometria-Medium";
+      font-size: 12px;
+      border: 0;
+      outline: none;
+      padding: 10px 40px;
+      border-radius: 50px; }
+      .sidebar .tasks__button button:hover {
+        background-color: #153259; }
+.sidebar .colleague {
+  height: 100%;
+  padding: 2vw 0; }
+  .sidebar .colleague__title {
+    color: #1f273c;
+    font-size: 20px;
+    font-family: "Geometria-Bold";
+    padding: 1vw 3.5vw;
+    position: relative; }
+    .sidebar .colleague__title::before {
+      content: "";
+      width: 3vw;
+      height: 3vw;
+      display: inline-block;
+      background: url("../svg/icon_man.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0vw;
+      top: 0.5vw; }
+  .sidebar .colleague .tags {
+    padding: 1vw 0; }
+    .sidebar .colleague .tags__row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 10px 0; }
+      .sidebar .colleague .tags__row > a {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        color: #1f273c;
+        font-family: "Geometria-Light";
+        font-size: 9px;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration: none; }
+        .sidebar .colleague .tags__row > a:hover {
+          border-color: #1f273c; }
+      .sidebar .colleague .tags__row > a:first-child {
+        margin-right: 3px; }
+.sidebar .question {
+  height: 100%;
+  padding: 5px 0 0;
+  background-color: #fff; }
+  .sidebar .question__title {
+    font-size: 20px;
+    font-family: "Geometria-Bold";
+    color: #1f273c;
+    padding: 1.8vw 4.5vw 1vw;
+    position: relative; }
+    .sidebar .question__title::before {
+      content: "";
+      width: 3vw;
+      height: 3vw;
+      display: inline-block;
+      background: url("../svg/icon_qustion.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 1vw;
+      top: 1.2vw; }
+  .sidebar .question__desc {
+    padding: 1vw 1.5vw;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: "Geometria-Light"; }
+  .sidebar .question__inner {
+    font-family: "Geometria-Light";
+    font-size: 12px;
+    padding: 0 3vw; }
+    .sidebar .question__inner .item {
+      margin-bottom: 5px; }
+      .sidebar .question__inner .item .radio {
+        display: none; }
+      .sidebar .question__inner .item label {
+        position: relative; }
+        .sidebar .question__inner .item label span {
+          width: 10px;
+          height: 10px;
+          cursor: pointer;
+          border-radius: 50%;
+          position: absolute;
+          left: -15px;
+          top: 2px; }
+      .sidebar .question__inner .item input:checked + label span {
+        width: 12px;
+        height: 12px;
+        left: -16px; }
+    .sidebar .question__inner .restrant span {
+      border: 1px solid #f58065; }
+    .sidebar .question__inner .restrant input:checked + label span {
+      background-color: #f58065; }
+    .sidebar .question__inner .base span {
+      border: 1px solid #ebdb72; }
+    .sidebar .question__inner .base input:checked + label span {
+      background-color: #ebdb72; }
+    .sidebar .question__inner .rancho span {
+      border: 1px solid #59e5ca; }
+    .sidebar .question__inner .rancho input:checked + label span {
+      background-color: #59e5ca; }
+    .sidebar .question__inner .lapland span {
+      border: 1px solid #b797f4; }
+    .sidebar .question__inner .lapland input:checked + label span {
+      background-color: #b797f4; }
+  .sidebar .question__result {
+    padding: 1.5vw 1.5vw 30px;
+    margin-top: 30px;
+    background-color: #454545;
+    height: auto; }
+.sidebar .result {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .sidebar .result__desc {
+    font-size: 16px;
+    font-family: "Geometria-Light";
+    color: #fff; }
+  .sidebar .result__circle {
+    position: relative;
+    margin: 25px 0; }
+    .sidebar .result__circle > div {
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-family: "Geometria-Thin"; }
+      .sidebar .result__circle > div .circle-percent {
+        font-size: 55px; }
+      .sidebar .result__circle > div .circle-percent-text {
+        font-size: 14px; }
+  .sidebar .result__desc2 {
+    font-size: 20px;
+    font-family: "Geometria-Medium";
+    color: #fff; }
+.sidebar .widgets {
+  height: 100%;
+  padding: 2vw 0; }
+  .sidebar .widgets__title {
+    color: #1f273c;
+    font-size: 20px;
+    font-family: "Geometria-Bold";
+    padding: 1vw 3.5vw 30px;
+    position: relative; }
+    .sidebar .widgets__title::before {
+      content: "";
+      width: 3vw;
+      height: 3vw;
+      display: inline-block;
+      background: url("../svg/icon_widgets.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0vw;
+      top: 0.5vw; }
+  .sidebar .widgets .grid {
+    width: 100%; }
+    .sidebar .widgets .grid:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .sidebar .widgets .grid .grid-item {
+      float: left;
+      width: 100%;
+      height: auto;
+      padding: 1vw 1.5vw;
+      background: #8a8a8a;
+      margin-bottom: 50px; }
+    .sidebar .widgets .grid .weather {
+      background-color: #fff;
+      padding: 0; }
+      .sidebar .widgets .grid .weather__header {
+        padding: 1vw 1.5vw; }
+      .sidebar .widgets .grid .weather .place {
+        float: left;
+        width: 60%;
+        color: #373737; }
+        .sidebar .widgets .grid .weather .place .date {
+          font-size: 16px;
+          font-family: "Geometria-Light"; }
+        .sidebar .widgets .grid .weather .place .city {
+          margin-top: 5px;
+          font-family: "Geometria-Medium"; }
+      .sidebar .widgets .grid .weather .options {
+        float: right;
+        width: 40%;
+        text-align: right; }
+        .sidebar .widgets .grid .weather .options .preferences {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          background: url("../svg/icon_preferences.svg");
+          background-size: contain;
+          background-repeat: no-repeat; }
+          .sidebar .widgets .grid .weather .options .preferences:hover {
+            background: url("../svg/icon_preferences-hover.svg"); }
+        .sidebar .widgets .grid .weather .options .w-close {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          margin-left: 10px;
+          background: url("../svg/x.svg");
+          background-size: contain;
+          background-repeat: no-repeat; }
+          .sidebar .widgets .grid .weather .options .w-close:hover {
+            background: url("../svg/x-hover.svg"); }
+      .sidebar .widgets .grid .weather__content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding-top: 20px; }
+        .sidebar .widgets .grid .weather__content .temp {
+          text-align: center; }
+          .sidebar .widgets .grid .weather__content .temp .img {
+            width: 80px;
+            height: 56px;
+            display: inline-block;
+            background: url("../svg/sun_cloud.svg");
+            background-size: contain;
+            background-repeat: no-repeat; }
+          .sidebar .widgets .grid .weather__content .temp .deg {
+            font-size: 5vw;
+            font-family: "Geometria-Thin";
+            color: #373737; }
+        .sidebar .widgets .grid .weather__content .days {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          background-color: #2384ce;
+          margin-top: 20px; }
+          .sidebar .widgets .grid .weather__content .days .day {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 20px;
+            color: #fff; }
+            .sidebar .widgets .grid .weather__content .days .day .img {
+              width: 50px;
+              height: 50px;
+              display: inline-block;
+              margin: 7px 0; }
+            .sidebar .widgets .grid .weather__content .days .day .sun {
+              background: url("../svg/sun.svg");
+              background-size: contain;
+              background-repeat: no-repeat; }
+            .sidebar .widgets .grid .weather__content .days .day .rain {
+              background: url("../svg/rain.svg");
+              background-size: contain;
+              background-repeat: no-repeat; }
+            .sidebar .widgets .grid .weather__content .days .day .date {
+              font-size: 14px;
+              font-family: "Geometria-Thin"; }
+            .sidebar .widgets .grid .weather__content .days .day .deg {
+              font-size: 14px;
+              font-family: "Geometria-Light"; }
+  .sidebar .widgets .append-button {
+    background-color: #2f4f7d;
+    color: #fff;
+    font-family: "Geometria-Medium";
+    font-size: 12px;
+    border: 0;
+    outline: none;
+    padding: 10px 40px;
+    border-radius: 50px; }
+    .sidebar .widgets .append-button:hover {
+      background-color: #153259; }
+
+.search {
+  width: 100%;
+  height: 50px;
+  margin-left: -27%; }
+  .search__inner {
+    position: relative; }
+  .search input[type="text"] {
+    height: 50px;
+    font-size: 12px;
+    color: #8a8a8a;
+    display: inline-block;
+    border-left: 1px solid #1f273c;
+    border-right: 1px solid #1f273c;
+    border-top: none;
+    border-bottom: none;
+    outline: none;
+    padding-right: 60px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 4;
+    -webkit-transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+            transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+    cursor: pointer; }
+    .search input[type="text"]:hover {
+      z-index: 0;
+      background-color: #1f273c; }
+  .search input[type="text"]:focus {
+    width: 75%;
+    padding: 0 4.5vw;
+    z-index: 1;
+    background-color: #153259;
+    color: #8a8a8a;
+    cursor: text; }
+  .search #search__submit {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    float: right;
+    text-indent: -10000px;
+    background-image: url("../svg/search.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 2;
+    cursor: pointer; }
+    .search #search__submit:hover + #search__field {
+      background-color: red !important; }
+  .search input[type="text"]:focus + #search__submit {
+    background-image: url("../svg/x.svg"); }
+
+@media screen and (max-width: 540px) {
+  .main .news__item .col-wrap1 {
+    width: 100%; }
+  .main .news__item .col-wrap2 {
+    width: 100%;
+    position: static;
+    margin: 0; }
+    .main .news__item .col-wrap2 .img {
+      float: none;
+      width: 100%;
+      position: static;
+      margin: 0; }
+    .main .news__item .col-wrap2 .desc {
+      padding: 20px 0;
+      border-bottom: solid #8a8a8a 1px; } }
+@media screen and (max-width: 767px) {
+  .header__menu {
+    position: fixed;
+    width: 100%; }
+  .header .navbar-collapse .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .header .navbar-collapse .nav .menu__item .link {
+      font-size: 16px; }
+  .header .search {
+    width: 100%;
+    margin: 0;
+    background-color: #1f273c; }
+    .header .search input[type="text"]:hover {
+      background-color: #153259; }
+    .header .search input[type="text"]:focus {
+      width: 100vw;
+      padding: 0 60px; }
+
+  .sidebar .tasks__title, .sidebar .question__title {
+    padding: 8px 50px 20px 50px; }
+    .sidebar .tasks__title::before, .sidebar .question__title::before {
+      width: 30px;
+      height: 30px;
+      top: 0.5vw; }
+  .sidebar .tasks__button, .sidebar .question__button {
+    text-align: center; }
+  .sidebar .colleague__title {
+    padding: 8px 50px; }
+    .sidebar .colleague__title::before {
+      width: 30px;
+      height: 30px; }
+  .sidebar .tags__row {
+    margin: 0 !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .sidebar .tags__row > a {
+      font-size: 2.3vw !important;
+      margin-bottom: 10px; }
+  .sidebar .question__desc {
+    padding: 20px 7vw; }
+  .sidebar .question__inner {
+    padding: 0 9vw; }
+    .sidebar .question__inner .item {
+      margin-bottom: 15px; } }
+@media screen and (max-width: 960px) {
+  .header .nav .menu__item .link {
+    font-size: 9px; } }
+@media screen and (max-width: 1199px) {
+  .main .news__item:nth-child(even) {
+    margin-top: 30px; } }

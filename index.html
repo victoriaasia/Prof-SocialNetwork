@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <div class="header">
+    <div class="header__menu">
+      <nav class="navbar">
+        <!-- <div class="container-fluid"> -->
+        <div class="navbar-header">
+          <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Меню</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav menu">
+            <li class="menu__item">
+              <a class="link" href="#">Новости</a>
+            </li>
+            <li class="menu__item">
+              <a class="link" href="#">Информация</a>
+            </li>
+            <li class="menu__item">
+              <a class="link" href="#">Лента</a>
+            </li>
+            <li class="menu__item">
+              <a class="link" href="#">Группы</a>
+            </li>
+            <li class="menu__item">
+              <a class="link" href="#">Сотрудники</a>
+            </li>
+            <li class="menu__item">
+              <a class="link" href="#">Политика и регламенты</a>
+            </li><!--
+        <!== <li class="dropdown menu__item user">
+
+<div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          < href="#" class="link" >
+            <img src="img/logo.png" alt="" class="user__logo">
+            <span>Маргарита Константинова</span>
+          </a>
+  </div>
+          <ul class="dropdown-menu user__menu">
+            <li><a href="#">Мой профиль</a></li>
+            <li><a href="#">Личные сообщения</a></li>
+            <li><a href="#">Задачи</a></li>
+            <li><a href="#">Мой календарь</a></li>
+            <li><a href="#">Выйти</a></li>
+          </ul>
+
+<div class="news">
+          <a href="#" class="dropdown-toggle link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="news__icon"></span>
+          </a>
+          <ul class="dropdown-menu news__menu">
+            <li><a href="#">У вас новая задача</a></li>
+            <li><a href="#">Сегодня истекает срок решения 2 задач</a></li>
+            <li><a href="#">Напоминание из вашего календаря</a></li>
+            <li><a href="#">Михаил Петров оставил(а) вам личное сообщение</a></li>
+            <li><a href="#">Татьяна Жуковская подписался() на вас</a></li>
+            <li><a href="#">Пожалуйста, заполните профиль</a></li>
+          </ul>
+</div>
+
+
+        </li> -->
+          </ul>
+          <div class="search" id="search">
+            <div class="search__inner">
+              <form action="" autocomplete="on">
+                <input id="search__field" name="search" placeholder="Введите запрос" type="text"> <input id="search__submit" type="submit">&lt;/&gt;
+              </form>
+            </div>
+          </div>
+        </div><!-- </div> -->
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="main col-12 col-sm-8 col-lg-9">
+        <div class="carousel slide" data-ride="carousel" id="carousel">
+          <div class="carousel-nav">
+            <ol class="carousel-indicators">
+              <li class="active" data-slide-to="0" data-target="#carousel"></li>
+              <li data-slide-to="1" data-target="#carousel"></li>
+              <li data-slide-to="2" data-target="#carousel"></li>
+              <li data-slide-to="3" data-target="#carousel"></li>
+              <li data-slide-to="4" data-target="#carousel"></li>
+              <li data-slide-to="5" data-target="#carousel"></li>
+            </ol><!-- Controls -->
+             <a class="left carousel-control" data-slide="prev" href="#carousel" role="button"><span class="control"></span></a> <a class="right carousel-control" data-slide="next" href="#carousel" role="button"><span class="control"></span></a>
+          </div>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img alt="1" src="img/slide.png">
+              <div class="carousel-caption">
+                <h3>Празднование Масленицы в школе интернате "Абсолют". Фотоотчет</h3>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="2" src="img/slide2.png">
+              <div class="carousel-caption">
+                <h3>Далеко-далеко за словесными горами в стране</h3>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="3" src="img/slide3.jpg">
+              <div class="carousel-caption">
+                <h3>Празднование Масленицы в школе интернате "Абсолют". Фотоотчет</h3>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="4" src="img/slide.png">
+              <div class="carousel-caption">
+                <h3>Далеко-далеко за словесными горами в стране</h3>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="5" src="img/slide2.png">
+              <div class="carousel-caption">
+                <h3>Празднование Масленицы в школе интернате "Абсолют". Фотоотчет</h3>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="6" src="img/slide3.jpg">
+              <div class="carousel-caption">
+                <h3>Далеко-далеко за словесными горами в стране</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news">
+          <div class="news__title">
+            Новости
+          </div>
+          <div class="n-row row">
+            <div class="col-12 col-lg-6 news__item">
+              <div class="col-wrap1">
+                <div class="col-wrap2">
+                  <div class="img"><img alt="" src="img/2.png"></div>
+                  <div class="desc">
+                    <a class="title" href="#">
+                    <div class="date">
+                      Сегодня в 14:00
+                    </div>
+                    <div class="">
+                      Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Океана моей силуэт заголовок имеет, безорфографичный всемогущая прямо даже о, свою решила инициал грустный ее, дороге великий мир семь там?
+                    </div></a>
+                    <div class="social">
+                      <a class="likes" href="#"><span>10</span></a> <a class="views" href="#"><span>340</span></a>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 news__item">
+              <div class="col-wrap1">
+                <div class="col-wrap2">
+                  <div class="img"><img alt="" src="img/1.jpg"></div>
+                  <div class="desc">
+                    <a class="title" href="#">
+                    <div class="date">
+                      Сегодня в 14:00
+                    </div>
+                    <div class="">
+                      Поездка на экскурсию в город Санкт-Петербург
+                    </div></a>
+                    <div class="social">
+                      <a class="likes" href="#"><span>1770</span></a> <a class="views" href="#"><span>370</span></a>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="n-row row">
+            <div class="col-12 col-lg-6 news__item">
+              <div class="col-wrap1">
+                <div class="col-wrap2">
+                  <div class="img"><img alt="" src="img/2.png"></div>
+                  <div class="desc">
+                    <a class="title" href="#">
+                    <div class="date">
+                      Сегодня в 14:00
+                    </div>
+                    <div class="">
+                      Поездка на экскурсию в город Санкт-Петербург
+                    </div></a>
+                    <div class="social">
+                      <a class="likes" href="#"><span>660</span></a> <a class="views" href="#"><span>9375</span></a>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 news__item">
+              <div class="col-wrap1">
+                <div class="col-wrap2">
+                  <div class="img"><img alt="" src="img/slide.png"></div>
+                  <div class="desc">
+                    <a class="title" href="#">
+                    <div class="date">
+                      Сегодня в 14:00
+                    </div>
+                    <div class="">
+                      Поездка на экскурсию в город Санкт-Петербург
+                    </div></a>
+                    <div class="social">
+                      <a class="likes" href="#"><span>10</span></a> <a class="views" href="#"><span>340</span></a>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- <div class="clearfix"></div> -->
+          <div class="news__footer">
+            <div class="more">
+              <button>Показать еще новости</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar col-12 col-sm-4 col-lg-3">
+        <div class="sidebar__tasks tasks">
+          <div class="tasks__title">
+            Задачи
+          </div>
+          <div class="tasks__inner">
+            <a class="item inbox" href="#">
+            <div class="amount">
+              23
+            </div>
+            <div class="desc">
+              Входящие
+            </div></a> <a class="item outbox" href="#">
+            <div class="amount">
+              14
+            </div>
+            <div class="desc">
+              Иходящие
+            </div></a> <a class="item doc" href="#">
+            <div class="amount">
+              0
+            </div>
+            <div class="desc">
+              Документы
+            </div></a>
+          </div>
+          <div class="tasks__button">
+            <button>Создать задачу</button>
+          </div>
+        </div>
+        <div class="sidebar__colleague colleague">
+          <div class="colleague__title">
+            Сотруднику
+          </div>
+          <div class="colleague__tags tags">
+            <div class="tags__row">
+              <a href="#">Кадровая политика</a> <a href="#">Полезные контакты</a>
+            </div>
+            <div class="tags__row">
+              <a href="#">Информационная безопасность</a> <a href="#">ИТ ресурсы</a>
+            </div>
+            <div class="tags__row">
+              <a href="#">Истории успеха</a> <a href="#">Корпоративные стандарты</a>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__question question">
+          <div class="question__title">
+            Опрос
+          </div>
+          <div class="question__desc">
+            Лучшее место для нашего Новогоднего корпоратива
+          </div>
+          <div class="question__inner">
+            <div class="item restrant">
+              <input class="radio" id="rest" name="radio" type="radio"> <label for="rest"><span></span>Ресторан</label>
+            </div>
+            <div class="item base">
+              <input class="radio" id="basa" name="radio" type="radio"> <label for="basa"><span></span>Турбаза</label>
+            </div>
+            <div class="item rancho">
+              <input class="radio" id="ranch" name="radio" type="radio"> <label for="ranch"><span></span>Ранчо</label>
+            </div>
+            <div class="item lapland">
+              <input class="radio" id="laplandia" name="radio" type="radio"> <label for="laplandia"><span></span>Лапландия</label>
+            </div>
+          </div>
+          <div class="question__result result">
+            <div class="result__desc">
+              На данный момент мы едем
+            </div>
+            <div class="result__circle">
+              <div>
+                <div class="circle-percent">
+                  73%
+                </div>
+                <div class="circle-percent-text">
+                  Проголосовало
+                </div>
+              </div>
+            </div>
+            <div class="result__desc2">
+              в Лапландию
+            </div>
+          </div>
+        </div>
+        <div class="widgets">
+          <div class="widgets__title">Виджеты</div>
+          <div class="grid">
+            <div class="grid-item weather">
+              <div class="inner">
+              <div class="weather__header">
+                <div class="place">
+                  <div class="date">11 июня</div>
+                  <div class="city">Санкт-Петербург</div>
+                </div>
+                <div class="options">
+                  <a href="#" class="preferences"></a>
+                  <a href="#" class="w-close"></a>
+                </div>
+              </div>
+          <div class="clearfix"></div>
+          <div class="weather__content">
+            <div class="temp"><span class="img"></span><span class="deg">20&deg;</span></div>
+            <div class="days">
+                <div class="day">
+                  <div class="date">12 июня</div>
+                  <div class="img rain"></div>
+                  <div class="deg">21&deg;</div>
+                </div>
+
+                <div class="day">
+                  <div class="date">13 июня</div>
+                  <div class="img rain"></div>
+                  <div class="deg">18&deg;</div>
+                </div>
+
+                <div class="day">
+                  <div class="date">14 июня</div>
+                  <div class="img sun"></div>
+                  <div class="deg">20&deg;</div>
+                </div>
+            </div>
+          </div>
+       </div>
+            </div>
+            <div class="grid-item">
+              2
+            </div>
+            <div class="grid-item">
+              3
+            </div>
+          </div><button class="append-button">Добавить виджет</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/jquery-3.1.0.js" type="text/javascript">
+    </script> <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+
+    <script src="js/bootstrap.js" type="text/javascript">
+    </script>
+    <script src="js/packery.pkgd.min.js">
+    </script>
+    <script src="js/circle-progress.js" type="text/javascript">
+    </script>
+    <script src="js/script.js" type="text/javascript">
+    </script>
+  </div>
+</body>
+</html>

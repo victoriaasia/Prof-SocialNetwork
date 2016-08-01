@@ -1,0 +1,805 @@
+@import "colors"
+@import "fonts"
+
+body
+  background-color: $lightGray
+  font-family: 'Geometria', sans-serif
+.container
+  width: 100%
+  padding: 0 25px
+  margin-top: 2.8vw
+.header
+  height: 55px
+  &__menu
+    background-color: $midBlue
+    position: relative
+    z-index: 999
+    .navbar-toggle
+      border-color: $paleBlue
+      .icon-bar
+        background-color: $paleBlue
+  .navbar
+    margin-bottom: 0
+  .navbar-collapse
+    padding: 0 !important
+    overflow: hidden
+    z-index: 999999
+    .nav
+      font-size: 12px
+      font-family: 'Geometria'
+      color: $paleBlue
+      padding: 0 25px
+      width: 65vw
+      display: flex
+      justify-content: center
+
+      // .open
+      //   &:hover, &:focus, &:active
+      //     background-color: $darkBlue
+      //   > a
+      //     background-color: $darkBlue !important
+      //     color: $white !important
+      // .user
+      //   display: flex
+      //   .dropdown-menu
+      //     width: 100%
+      //     top: 102%
+      //     border: 0
+      //     box-shadow: none
+      //   .dropdown-toggle
+      //     padding: 0
+      //     text-decoration: none
+      //   &__logo
+      //     border-radius: 100px
+      //     width: 42px
+      //     height: 42px
+      //   .news
+      //     &__icon
+      //       display: block
+      //       text-indent: -9999px
+      //       width: 18px
+      //       height: 18px
+      //       background: url("../svg/bell_10.svg")
+      //       background-size: contain
+      //       background-repeat: no-repeat
+
+      .menu__item
+        .link
+          color: $paleBlue
+          white-space: nowrap
+          &:hover, &:focus, &:active
+            color: $lightGray
+            background-color: transparent
+
+.main
+  #carousel
+    // z-index: -1
+    .item
+      -webkit-transition: 0.7s ease-in-out opacity
+      -moz-transition: 0.7s ease-in-out opacity
+      -o-transition: 0.7s ease-in-out opacity
+      transition: 0.7s ease-in-out opacity
+      left: 0 !important
+    .next.left, .prev.right
+      opacity: 1
+      z-index: 1
+    .active.left, .active.right
+      opacity: 0
+      z-index: 2
+
+    .carousel-nav
+      height: 11vw
+      width: 50%
+      right: 0
+      left: 0
+      bottom: 0
+      position: absolute
+      z-index: 2
+    .carousel-indicators
+      bottom: 1vw
+      left: 70%
+      width: 115px
+      padding-left: 0
+      margin-left: -32%
+      li
+        background-color: $paleBlue
+        border: 0
+        width: 7px
+        height: 7px
+        margin: 4px
+        &:hover
+          background-color: $lightPaleBlue
+        &:focus
+          background-color: $darkBlue
+      .active
+        width: 7px
+        height: 7px
+        background-color: $darkBlue
+    .carousel-control
+      opacity: 1
+      background-image: none
+      position: static
+      .control
+        display: block
+        text-indent: -9999px
+        width: 2.5vw
+        height: 2.5vw
+        background-size: contain
+        background-repeat: no-repeat
+        margin: 0 auto
+        position: absolute
+        bottom: 0
+        z-index: 999
+        border-radius: 100px
+        background-color: $lightGray
+        top: 20%
+    .left
+      span
+        -webkit-mask-image: url("../svg/left.svg")
+        mask-image: url("../svg/left.svg")
+        right: 14%
+        &:hover
+          -webkit-mask-image: none
+          mask-image: none
+          background-color: $darkBlue
+          background-image: url("../svg/left-hover.svg")
+          background-repeat: no-repeat
+    .right
+      span
+        -webkit-mask-image: url("../svg/right.svg")
+        mask-image: url("../svg/right.svg")
+        right: 4%
+        &:hover
+          -webkit-mask-image: none
+          mask-image: none
+          background-color: $darkBlue
+          background-image: url("../svg/right-hover.svg")
+          background-repeat: no-repeat
+    .item
+      height: 33.5vw
+      img
+        width: 100%
+        height: auto
+      .carousel-caption
+        height: 11vw
+        width: 50%
+        padding: 2vw 10vw 3vw 2vw
+        right: 0
+        left: 0
+        bottom: 0
+        background-color: $midBlue
+        color: $lightGray
+        text-align: left
+        line-height: 2vw
+        overflow: hidden
+        h3
+          font-size: 1.5vw
+          font-family: 'Geometria-Light'
+
+  .news
+    background-color: $white
+    height: auto
+    margin: 30px 0
+    padding: 3.5vw 0
+    .row
+      margin: 0
+    .n-row
+      padding: 0 30px
+      margin-bottom: 35px
+    &__title
+      position: relative
+      padding: 0 85px 29px
+      font-family: "Geometria-Bold"
+      color: $midBlue
+      font-size: 22px
+      &::before
+        content: ""
+        width: 35px
+        height: 35px
+        display: inline-block
+        background: url('../svg/icon_news.svg')
+        background-size: contain
+        background-repeat: no-repeat
+        position: absolute
+        left: 41px
+        top: -5px
+    &__item
+      height: auto
+      overflow: hidden
+      .col-wrap1
+        width: 33%
+      .col-wrap2
+        width: 200%
+        margin-right: -100%
+        position: relative
+        left: 100%
+        .img
+          float: left
+          width: 50%
+          margin-right: -100%
+          position: relative
+          left: -50%
+          img
+            width: 100%
+            height: auto
+        .desc
+          margin-left: 20px
+          font-size: 12px
+          .title
+            display: block
+            height: 68px
+            overflow: hidden
+            font-family: 'Geometria'
+            text-decoration: none
+            > div:nth-child(2)
+              color: $darkGray
+              line-height: 13px
+              max-height: 40px
+              overflow: hidden
+            .date
+              max-height: 12px
+              overflow: hidden
+              white-space: nowrap
+              margin-bottom: 7px
+              color: $gray
+          .social
+            padding-top: 5px
+            a
+              color: $gray
+              text-decoration: none
+              padding-left: 20px
+              &:first-child
+                margin-right: 10px
+            .likes
+              position: relative
+              &::before
+                content: ""
+                width: 12px
+                height: 12px
+                display: inline-block
+                background: url('../svg/heart.svg')
+                background-size: contain
+                background-repeat: no-repeat
+                position: absolute
+                left: 0
+                top: 1px
+            .views
+              position: relative
+              &::before
+                content: ""
+                width: 15px
+                height: 15px
+                display: inline-block
+                background: url('../svg/views.svg')
+                background-size: contain
+                background-repeat: no-repeat
+                position: absolute
+                left: 0
+                top: 3px
+              &:hover
+                &::before
+                  background: url('../svg/views-hover.svg')
+                  background-repeat: no-repeat
+
+
+        .clear
+          clear: both
+          font-size: 0
+          overflow: hidden
+    &__footer
+      .more
+        padding: 20px 45px
+        button
+          padding-left: 50px
+          border: 0
+          background: transparent
+          outline: none
+          position: relative
+          font-size: 14px
+          color: $gray
+          font-family: "Geometria"
+          &::before
+            content: ""
+            width: 35px
+            height: 35px
+            display: inline-block
+            background: url('../svg/icon_+.svg')
+            background-size: contain
+            background-repeat: no-repeat
+            position: absolute
+            left: 0
+            top: -9px
+          &:hover
+            &::before
+              background: url('../svg/icon_+hover.svg')
+
+
+
+.sidebar
+  .tasks
+    background-color: $blue
+    height: 100%
+    padding: 5px 0 25px
+    &__title
+      font-size: 20px
+      font-family: 'Geometria-Bold'
+      color: $white
+      padding: 3vw 4.5vw 2vw
+      position: relative
+      &::before
+        content: ""
+        width: 3vw
+        height: 3vw
+        display: inline-block
+        background: url("../svg/to-do-list.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        position: absolute
+        left: 1vw
+        top: 2.2vw
+    &__inner
+      display: flex
+      justify-content: space-between
+      .item
+        width: 33%
+        font-family: 'Geometria-Thin'
+        color: $white
+        text-align: center
+        text-decoration: none
+        &:hover
+          color: $originalBlue
+      .amount
+        font-size: 4vw
+      .desc
+        font-size: 12px
+        padding: 10px 0
+
+    &__button
+      padding: 1vw 1.5vw
+      button
+        background-color: $originalBlue
+        color: $white
+        font-family: 'Geometria-Medium'
+        font-size: 12px
+        border: 0
+        outline: none
+        padding: 10px 40px
+        border-radius: 50px
+        &:hover
+          background-color: $midBlue
+
+  .colleague
+    height: 100%
+    padding: 2vw 0
+    &__title
+      color: $darkBlue
+      font-size: 20px
+      font-family: 'Geometria-Bold'
+      padding: 1vw 3.5vw
+      position: relative
+      &::before
+        content: ""
+        width: 3vw
+        height: 3vw
+        display: inline-block
+        background: url("../svg/icon_man.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        position: absolute
+        left: 0vw
+        top: 0.5vw
+    .tags
+      padding: 1vw 0
+      &__row
+        display: flex
+        justify-content: space-between
+        margin: 10px 0
+        > a
+          width: 100%
+          padding: 10px
+          border: 1px solid $white
+          border-radius: 50px
+          color: $darkBlue
+          font-family: 'Geometria-Light'
+          font-size: 9px
+          text-align: center
+          white-space: nowrap
+          text-decoration: none
+          &:hover
+            border-color: $darkBlue
+        > a:first-child
+          margin-right: 3px
+
+  .question
+    height: 100%
+    padding: 5px 0 0
+    background-color: $white
+    &__title
+      font-size: 20px
+      font-family: 'Geometria-Bold'
+      color: $darkBlue
+      padding: 1.8vw 4.5vw 1vw
+      position: relative
+      &::before
+        content: ""
+        width: 3vw
+        height: 3vw
+        display: inline-block
+        background: url("../svg/icon_qustion.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        position: absolute
+        left: 1vw
+        top: 1.2vw
+    &__desc
+      padding: 1vw 1.5vw
+      font-size: 16px
+      line-height: 25px
+      font-family: 'Geometria-Light'
+    &__inner
+      font-family: 'Geometria-Light'
+      font-size: 12px
+      padding: 0 3vw
+      .item
+        margin-bottom: 5px
+        .radio
+          display: none
+        label
+          position: relative
+          span
+            width: 10px
+            height: 10px
+            cursor: pointer
+            border-radius: 50%
+            position: absolute
+            left: -15px
+            top: 2px
+        input:checked + label span
+          width: 12px
+          height: 12px
+          left: -16px
+      .restrant
+        span
+          border: 1px solid $red
+        input:checked + label span
+          background-color: $red
+      .base
+        span
+          border: 1px solid $yellow
+        input:checked + label span
+          background-color: $yellow
+      .rancho
+        span
+          border: 1px solid $sea
+        input:checked + label span
+          background-color: $sea
+      .lapland
+        span
+          border: 1px solid $violet
+        input:checked + label span
+          background-color: $violet
+    &__result
+      padding: 1.5vw 1.5vw 30px
+      margin-top: 30px
+      background-color: $midGray
+      height: auto
+
+  .result
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__desc
+      font-size: 16px
+      font-family: 'Geometria-Light'
+      color: $white
+    &__circle
+      position: relative
+      margin: 25px 0
+      > div
+        position: absolute
+        top: 50px
+        width: 100%
+        text-align: center
+        color: $white
+        font-family: 'Geometria-Thin'
+        .circle-percent
+          font-size: 55px
+        .circle-percent-text
+          font-size: 14px
+
+    &__desc2
+      font-size: 20px
+      font-family: 'Geometria-Medium'
+      color: $white
+
+  .widgets
+    height: 100%
+    padding: 2vw 0
+    &__title
+      color: $darkBlue
+      font-size: 20px
+      font-family: 'Geometria-Bold'
+      padding: 1vw 3.5vw 30px
+      position: relative
+      &::before
+        content: ""
+        width: 3vw
+        height: 3vw
+        display: inline-block
+        background: url("../svg/icon_widgets.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        position: absolute
+        left: 0vw
+        top: 0.5vw
+    .grid
+      width: 100%
+      &:after
+        content: ''
+        display: block
+        clear: both
+      .grid-item
+        float: left
+        width: 100%
+        height: auto
+        padding: 1vw 1.5vw
+        background: $gray
+        margin-bottom: 50px
+      .weather
+        background-color: $white
+        padding: 0
+        &__header
+          padding: 1vw 1.5vw
+        .place
+          float: left
+          width: 60%
+          color: $darkGray
+          .date
+            font-size: 16px
+            font-family: "Geometria-Light"
+          .city
+            margin-top: 5px
+            font-family: "Geometria-Medium"
+        .options
+          float: right
+          width: 40%
+          text-align: right
+          .preferences
+            width: 15px
+            height: 15px
+            display: inline-block
+            background: url("../svg/icon_preferences.svg")
+            background-size: contain
+            background-repeat: no-repeat
+            &:hover
+              background: url("../svg/icon_preferences-hover.svg")
+          .w-close
+            width: 15px
+            height: 15px
+            display: inline-block
+            margin-left: 10px
+            background: url("../svg/x.svg")
+            background-size: contain
+            background-repeat: no-repeat
+            &:hover
+              background: url("../svg/x-hover.svg")
+        &__content
+          display: flex
+          flex-direction: column
+          padding-top: 20px
+          .temp
+            text-align: center
+            .img
+              width: 80px
+              height: 56px
+              display: inline-block
+              background: url("../svg/sun_cloud.svg")
+              background-size: contain
+              background-repeat: no-repeat
+            .deg
+              font-size: 5vw
+              font-family: "Geometria-Thin"
+              color: $darkGray
+          .days
+            display: flex
+            justify-content: space-between
+            background-color: $blue
+            margin-top: 20px
+            .day
+              display: flex
+              flex-direction: column
+              align-items: center
+              padding: 20px
+              color: $white
+              .img
+                width: 50px
+                height: 50px
+                display: inline-block
+                margin: 7px 0
+              .sun
+                background: url("../svg/sun.svg")
+                background-size: contain
+                background-repeat: no-repeat
+              .rain
+                background: url("../svg/rain.svg")
+                background-size: contain
+                background-repeat: no-repeat
+              .date
+                font-size: 14px
+                font-family: "Geometria-Thin"
+              .deg
+                font-size: 14px
+                font-family: "Geometria-Light"
+    .append-button
+      background-color: #2f4f7d
+      color: #fff
+      font-family: "Geometria-Medium"
+      font-size: 12px
+      border: 0
+      outline: none
+      padding: 10px 40px
+      border-radius: 50px
+      &:hover
+        background-color: $midBlue
+
+
+
+
+
+
+
+.search
+  width: 100%
+  height: 50px
+  margin-left: -27%
+  &__inner
+    position: relative
+  input[type="text"]
+    height: 50px
+    font-size: 12px
+    color: $gray
+    display: inline-block
+    border-left: 1px solid $darkBlue
+    border-right: 1px solid $darkBlue
+    border-top: none
+    border-bottom: none
+    outline: none
+    padding-right: 60px
+    width: 0px
+    position: absolute
+    top: 0
+    right: 0
+    background: none
+    z-index: 4
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000)
+    cursor: pointer
+    &:hover
+      z-index: 0
+      background-color: $darkBlue
+
+  input[type="text"]:focus
+    width: 75%
+    padding: 0 4.5vw
+    z-index: 1
+    background-color: $midBlue
+    color: $gray
+    cursor: text
+
+  #search__submit
+    height: 20px
+    width: 20px
+    display: inline-block
+    float: right
+    text-indent: -10000px
+    background-image: url('../svg/search.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    background-color: transparent
+    border: 0
+    outline: none
+    position: absolute
+    top: 15px
+    right: 20px
+    z-index: 2
+    cursor: pointer
+    // transition: opacity .4s ease
+    &:hover + #search__field
+      background-color: red !important
+
+  input[type="text"]:focus
+    + #search__submit
+      background-image: url('../svg/x.svg')
+
+
+
+@media screen and (max-width: 540px)
+  .main
+    .news__item
+      .col-wrap1
+        width: 100%
+      .col-wrap2
+        width: 100%
+        position: static
+        margin: 0
+        .img
+          float: none
+          width: 100%
+          position: static
+          margin: 0
+        .desc
+          padding: 20px 0
+          border-bottom: solid $gray 1px
+
+
+
+
+
+
+@media screen and (max-width: 767px)
+  .header
+    &__menu
+      position: fixed
+      width: 100%
+    .navbar-collapse
+      .nav
+        flex-direction: column
+        .menu__item .link
+          font-size: 16px
+    .search
+      width: 100%
+      margin: 0
+      background-color: $darkBlue
+      input[type="text"]:hover
+        background-color: $midBlue
+      input[type="text"]:focus
+        width: 100vw
+        padding: 0 60px
+  .sidebar
+    .tasks, .question
+      &__title
+        padding: 8px 50px 20px 50px
+        &::before
+          width: 30px
+          height: 30px
+          top: 0.5vw
+      &__button
+        text-align: center
+
+    .colleague
+      &__title
+        padding: 8px 50px
+        &::before
+          width: 30px
+          height: 30px
+    .tags
+      &__row
+        margin: 0 !important
+        flex-direction: column
+        > a
+          font-size: 2.3vw !important
+          margin-bottom: 10px
+
+    .question
+      &__desc
+        padding: 20px 7vw
+      &__inner
+        padding: 0 9vw
+        .item
+          margin-bottom: 15px
+
+
+@media screen and (max-width: 960px)
+
+  .header
+    .nav
+      .menu__item
+        .link
+          font-size: 9px
+
+
+@media screen and (max-width: 1199px)
+
+  .main
+    .news
+      &__item:nth-child(even)
+        margin-top: 30px
