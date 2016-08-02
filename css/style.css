@@ -804,6 +804,7 @@ body {
     outline: none;
     padding: 10px 40px;
     border-radius: 50px;
+    margin-bottom: 100px;
     position: absolute; }
     .sidebar .widgets .prepend-button:hover {
       background-color: #153259; }
