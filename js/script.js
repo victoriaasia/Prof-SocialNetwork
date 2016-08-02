@@ -4,13 +4,13 @@ var $grid = $('.grid').packery({
   itemSelector: '.grid-item'
 });
 
-$('.append-button').on( 'click', function() {
+$('.prepend-button').on( 'click', function() {
   // create new item elements
   var $items = getItemElement().add();
-  // append elements to container
-  $grid.append( $items )
-    // add and lay out newly appended elements
-    .packery( 'appended', $items );
+  // prepend elements to container
+  $grid.prepend( $items )
+    // add and lay out newly prepended elements
+    .packery( 'prepended', $items );
 });
 
   $grid.on( 'click', '.grid-item ', function( event ) {

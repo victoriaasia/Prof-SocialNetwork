@@ -498,7 +498,7 @@ body {
     font-family: "Geometria-Medium";
     color: #fff; }
 .sidebar .widgets {
-  height: 100%;
+  height: 100vh;
   padding: 2vw 0; }
   .sidebar .widgets__title {
     color: #1f273c;
@@ -518,21 +518,25 @@ body {
       left: 0vw;
       top: 0.5vw; }
   .sidebar .widgets .grid {
-    width: 100%; }
-    .sidebar .widgets .grid:after {
+    width: 100%;
+    min-height: 100vh !important; }
+    .sidebar .widgets .grid::after {
       content: "";
       display: block;
       clear: both; }
     .sidebar .widgets .grid .grid-item {
       float: left;
       width: 100%;
-      height: auto;
+      height: 320px;
       padding: 1vw 1.5vw;
       background: #454545;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      overflow: hidden; }
     .sidebar .widgets .grid .weather {
       background-color: #fff;
       padding: 0; }
+      .sidebar .widgets .grid .weather .inner {
+        height: 100%; }
       .sidebar .widgets .grid .weather__header {
         padding: 2vw 2.5vw; }
       .sidebar .widgets .grid .weather .place {
@@ -578,7 +582,9 @@ body {
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column;
-        padding-top: 20px; }
+        padding-top: 20px;
+        width: 100%;
+        height: 100%; }
         .sidebar .widgets .grid .weather__content .temp {
           text-align: center; }
           .sidebar .widgets .grid .weather__content .temp .img {
@@ -601,6 +607,7 @@ body {
           -webkit-justify-content: space-between;
               -ms-flex-pack: justify;
                   justify-content: space-between;
+          height: 100%;
           background-color: #2384ce;
           margin-top: 20px;
           padding: 0 1vw; }
@@ -618,7 +625,7 @@ body {
             -webkit-align-items: center;
                 -ms-flex-align: center;
                     align-items: center;
-            padding: 20px;
+            padding: 1vw;
             color: #fff; }
             .sidebar .widgets .grid .weather__content .days .day .img {
               width: 50px;
@@ -642,11 +649,21 @@ body {
     .sidebar .widgets .grid .rate {
       background-color: #2384ce;
       padding: 0; }
-      .sidebar .widgets .grid .rate__content .dynamic {
-        background-image: url("../img/kat.png");
-        background-size: cover;
+      .sidebar .widgets .grid .rate__content {
+        color: #fff;
+        padding: 1vw 2.5vw; }
+        .sidebar .widgets .grid .rate__content div:first-child {
+          font-size: 50px;
+          font-family: "Geometria-Thin"; }
+        .sidebar .widgets .grid .rate__content div:nth-child(2) {
+          font-size: 20px;
+          font-family: "Geometria-Bold";
+          margin: 15px 0 0 5px; }
+      .sidebar .widgets .grid .rate__dynamic {
         width: 100%;
-        height: 120px; }
+        height: auto; }
+        .sidebar .widgets .grid .rate__dynamic img {
+          width: 100%; }
       .sidebar .widgets .grid .rate__header {
         padding: 2vw 2.5vw; }
         .sidebar .widgets .grid .rate__header .date {
@@ -683,7 +700,7 @@ body {
             mask-image: url("../svg/x-hover.svg");
             background-color: #fff; }
     .sidebar .widgets .grid .calendar__header {
-      padding: 2vw 1vw; }
+      padding: 1vw; }
       .sidebar .widgets .grid .calendar__header .options {
         float: right;
         width: 40%;
@@ -694,7 +711,7 @@ body {
           display: inline-block;
           -webkit-mask-image: url("../svg/icon_preferences.svg");
           mask-image: url("../svg/icon_preferences.svg");
-          background-color: #fff; }
+          background-color: #8a8a8a; }
           .sidebar .widgets .grid .calendar__header .options .preferences:hover {
             -webkit-mask-image: url("../svg/icon_preferences-hover.svg");
             mask-image: url("../svg/icon_preferences-hover.svg");
@@ -706,7 +723,7 @@ body {
           margin-left: 10px;
           -webkit-mask-image: url("../svg/x.svg");
           mask-image: url("../svg/x.svg");
-          background-color: #f5f5f5; }
+          background-color: #8a8a8a; }
           .sidebar .widgets .grid .calendar__header .options .c-close:hover {
             -webkit-mask-image: url("../svg/x-hover.svg");
             mask-image: url("../svg/x-hover.svg");
@@ -730,6 +747,7 @@ body {
         color: #f5f5f5;
         margin: 0;
         max-width: 12vw;
+        max-height: 60px;
         overflow: hidden; }
       .sidebar .widgets .grid #datepicker .ui-datepicker-calendar {
         width: 100%; }
@@ -741,7 +759,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0 auto;
-        top: 32px;
+        top: 25px;
         position: absolute;
         border-radius: 100px;
         background-color: #373737;
@@ -755,20 +773,20 @@ body {
       .sidebar .widgets .grid #datepicker .ui-datepicker-next {
         -webkit-mask-image: url("../svg/right.svg");
         mask-image: url("../svg/right.svg");
-        right: 15px; }
+        right: 10px; }
       .sidebar .widgets .grid #datepicker .ui-datepicker td {
         padding: 5px 1px; }
         .sidebar .widgets .grid #datepicker .ui-datepicker td a {
           background: none;
           border: 0;
           display: block;
-          padding: 10px 1px;
+          padding: 5px 1px;
           border-radius: 100px;
           text-decoration: none;
           text-align: center;
           font-family: "Geometria-Light";
           color: #8a8a8a;
-          max-width: 40px;
+          max-width: 25px;
           margin: 0 auto; }
           .sidebar .widgets .grid #datepicker .ui-datepicker td a:hover, .sidebar .widgets .grid #datepicker .ui-datepicker td a .ui-state-active, .sidebar .widgets .grid #datepicker .ui-datepicker td a .ui-state-hover {
             background-color: #373737; }
@@ -777,7 +795,7 @@ body {
         color: #8a8a8a; }
     .sidebar .widgets .grid #datepicker thead {
       display: none; }
-  .sidebar .widgets .append-button {
+  .sidebar .widgets .prepend-button {
     background-color: #2f4f7d;
     color: #fff;
     font-family: "Geometria-Medium";
@@ -785,8 +803,9 @@ body {
     border: 0;
     outline: none;
     padding: 10px 40px;
-    border-radius: 50px; }
-    .sidebar .widgets .append-button:hover {
+    border-radius: 50px;
+    position: absolute; }
+    .sidebar .widgets .prepend-button:hover {
       background-color: #153259; }
 
 .search {
@@ -963,11 +982,4 @@ body {
 
   #carousel .item .carousel-caption h3 {
     height: 6vw;
-    overflow: hidden; }
-
-  .sidebar .weather .days {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+    overflow: hidden; } }

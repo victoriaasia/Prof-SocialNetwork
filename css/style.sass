@@ -516,7 +516,7 @@ body
       color: $white
 
   .widgets
-    height: 100%
+    height: 100vh
     padding: 2vw 0
     &__title
       color: $darkBlue
@@ -537,20 +537,24 @@ body
         top: 0.5vw
     .grid
       width: 100%
-      &:after
+      min-height: 100vh !important
+      &::after
         content: ''
         display: block
         clear: both
       .grid-item
         float: left
         width: 100%
-        height: auto
+        height: 320px
         padding: 1vw 1.5vw
         background: $midGray
         margin-bottom: 50px
+        overflow: hidden
       .weather
         background-color: $white
         padding: 0
+        .inner
+          height: 100%
         &__header
           padding: 2vw 2.5vw
         .place
@@ -590,6 +594,8 @@ body
           display: flex
           flex-direction: column
           padding-top: 20px
+          width: 100%
+          height: 100%
           .temp
             text-align: center
             .img
@@ -606,6 +612,7 @@ body
           .days
             display: flex
             justify-content: space-between
+            height: 100%
             background-color: $blue
             margin-top: 20px
             padding: 0 1vw
@@ -613,7 +620,7 @@ body
               display: flex
               flex-direction: column
               align-items: center
-              padding: 20px
+              padding: 1vw
               color: $white
               .img
                 width: 50px
@@ -639,11 +646,22 @@ body
         background-color: $blue
         padding: 0
         &__content
-          .dynamic
-            background-image: url('../img/kat.png')
-            background-size: cover
+          color: $white
+          padding: 1vw 2.5vw
+          div:first-child
+            font-size: 50px
+            font-family: "Geometria-Thin"
+          div:nth-child(2)
+            font-size: 20px
+            font-family: "Geometria-Bold"
+            margin: 15px 0 0 5px
+        &__dynamic
+          // background-image: url('../img/kat.png')
+          // background-size: cover
+          width: 100%
+          height: auto
+          img
             width: 100%
-            height: 120px
         &__header
           padding: 2vw 2.5vw
           .date
@@ -682,7 +700,7 @@ body
 
       .calendar
         &__header
-          padding: 2vw 1vw
+          padding: 1vw
           .options
             float: right
             width: 40%
@@ -693,7 +711,7 @@ body
               display: inline-block
               -webkit-mask-image: url("../svg/icon_preferences.svg")
               mask-image: url("../svg/icon_preferences.svg")
-              background-color: $white
+              background-color: $gray
               &:hover
                 -webkit-mask-image: url("../svg/icon_preferences-hover.svg")
                 mask-image: url("../svg/icon_preferences-hover.svg")
@@ -705,12 +723,11 @@ body
               margin-left: 10px
               -webkit-mask-image: url("../svg/x.svg")
               mask-image: url("../svg/x.svg")
-              background-color: $lightGray
+              background-color: $gray
               &:hover
                 -webkit-mask-image: url("../svg/x-hover.svg")
                 mask-image: url("../svg/x-hover.svg")
                 background-color: $white
-
       #datepicker
         .ui-datepicker
           width: 100% !important
@@ -729,6 +746,7 @@ body
             color: $lightGray
             margin: 0
             max-width: 12vw
+            max-height: 60px
             overflow: hidden
           &-calendar
             width: 100%
@@ -740,8 +758,8 @@ body
             background-size: cover
             background-repeat: no-repeat
             margin: 0 auto
-            top: 32px
-            position: absolute            
+            top: 25px
+            position: absolute
             border-radius: 100px
             background-color: $darkGray
             cursor: pointer
@@ -754,20 +772,20 @@ body
           &-next
             -webkit-mask-image: url("../svg/right.svg")
             mask-image: url("../svg/right.svg")
-            right: 15px
+            right: 10px
           td
             padding: 5px 1px
             a
               background: none
               border: 0
               display: block
-              padding: 10px 1px
+              padding: 5px 1px
               border-radius: 100px
               text-decoration: none
               text-align: center
               font-family: "Geometria-Light"
               color: $gray
-              max-width: 40px
+              max-width: 25px
               margin: 0 auto
               &:hover, .ui-state-active, .ui-state-hover
                 background-color: $darkGray
@@ -778,7 +796,7 @@ body
           display: none
 
 
-    .append-button
+    .prepend-button
       background-color: #2f4f7d
       color: $white
       font-family: "Geometria-Medium"
@@ -787,6 +805,7 @@ body
       outline: none
       padding: 10px 40px
       border-radius: 50px
+      position: absolute
       &:hover
         background-color: $midBlue
 
@@ -993,7 +1012,7 @@ body
         h3
           height: 6vw
           overflow: hidden
-  .sidebar
-    .weather
-      .days
-        flex-direction: column
+  // .sidebar
+  //   .weather
+  //     .days
+  //       flex-direction: column
