@@ -38,3 +38,19 @@ function getItemElement() {
 $('.result__circle').circleProgress({
   value: 0.7
 });
+
+
+// calendar
+
+// $('#dp').datepicker({
+//   format: "mm",
+//   startDate: "now",
+//   viewMode: "months",
+//   minViewMode: "months",
+//   language: "ru",
+//   todayHighlight: true
+// });
+
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );

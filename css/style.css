@@ -528,13 +528,13 @@ body {
       width: 100%;
       height: auto;
       padding: 1vw 1.5vw;
-      background: #8a8a8a;
+      background: #454545;
       margin-bottom: 50px; }
     .sidebar .widgets .grid .weather {
       background-color: #fff;
       padding: 0; }
       .sidebar .widgets .grid .weather__header {
-        padding: 1vw 1.5vw; }
+        padding: 2vw 2.5vw; }
       .sidebar .widgets .grid .weather .place {
         float: left;
         width: 60%;
@@ -602,7 +602,8 @@ body {
               -ms-flex-pack: justify;
                   justify-content: space-between;
           background-color: #2384ce;
-          margin-top: 20px; }
+          margin-top: 20px;
+          padding: 0 1vw; }
           .sidebar .widgets .grid .weather__content .days .day {
             display: -webkit-box;
             display: -webkit-flex;
@@ -638,6 +639,144 @@ body {
             .sidebar .widgets .grid .weather__content .days .day .deg {
               font-size: 14px;
               font-family: "Geometria-Light"; }
+    .sidebar .widgets .grid .rate {
+      background-color: #2384ce;
+      padding: 0; }
+      .sidebar .widgets .grid .rate__content .dynamic {
+        background-image: url("../img/kat.png");
+        background-size: cover;
+        width: 100%;
+        height: 120px; }
+      .sidebar .widgets .grid .rate__header {
+        padding: 2vw 2.5vw; }
+        .sidebar .widgets .grid .rate__header .date {
+          width: 60%;
+          float: left;
+          font-size: 16px;
+          font-family: "Geometria-Light";
+          color: #fff; }
+      .sidebar .widgets .grid .rate .options {
+        float: right;
+        width: 40%;
+        text-align: right; }
+        .sidebar .widgets .grid .rate .options .preferences {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          -webkit-mask-image: url("../svg/icon_preferences.svg");
+          mask-image: url("../svg/icon_preferences.svg");
+          background-color: #fff; }
+          .sidebar .widgets .grid .rate .options .preferences:hover {
+            -webkit-mask-image: url("../svg/icon_preferences-hover.svg");
+            mask-image: url("../svg/icon_preferences-hover.svg");
+            background-color: #fff; }
+        .sidebar .widgets .grid .rate .options .r-close {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          margin-left: 10px;
+          -webkit-mask-image: url("../svg/x.svg");
+          mask-image: url("../svg/x.svg");
+          background-color: #f5f5f5; }
+          .sidebar .widgets .grid .rate .options .r-close:hover {
+            -webkit-mask-image: url("../svg/x-hover.svg");
+            mask-image: url("../svg/x-hover.svg");
+            background-color: #fff; }
+    .sidebar .widgets .grid .calendar__header {
+      padding: 2vw 1vw; }
+      .sidebar .widgets .grid .calendar__header .options {
+        float: right;
+        width: 40%;
+        text-align: right; }
+        .sidebar .widgets .grid .calendar__header .options .preferences {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          -webkit-mask-image: url("../svg/icon_preferences.svg");
+          mask-image: url("../svg/icon_preferences.svg");
+          background-color: #fff; }
+          .sidebar .widgets .grid .calendar__header .options .preferences:hover {
+            -webkit-mask-image: url("../svg/icon_preferences-hover.svg");
+            mask-image: url("../svg/icon_preferences-hover.svg");
+            background-color: #fff; }
+        .sidebar .widgets .grid .calendar__header .options .c-close {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          margin-left: 10px;
+          -webkit-mask-image: url("../svg/x.svg");
+          mask-image: url("../svg/x.svg");
+          background-color: #f5f5f5; }
+          .sidebar .widgets .grid .calendar__header .options .c-close:hover {
+            -webkit-mask-image: url("../svg/x-hover.svg");
+            mask-image: url("../svg/x-hover.svg");
+            background-color: #fff; }
+    .sidebar .widgets .grid #datepicker .ui-datepicker {
+      width: 100% !important;
+      background: none;
+      border: 0; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker-header {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        background: none;
+        border: 0;
+        position: relative; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker-title {
+        font-size: 40px;
+        font-family: "Geometria-Thin";
+        color: #f5f5f5;
+        margin: 0;
+        max-width: 12vw;
+        overflow: hidden; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker-calendar {
+        width: 100%; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker a.ui-corner-all {
+        display: block;
+        text-indent: -9999px;
+        width: 35px;
+        height: 35px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 32px;
+        position: absolute;
+        border-radius: 100px;
+        background-color: #373737;
+        cursor: pointer; }
+        .sidebar .widgets .grid #datepicker .ui-datepicker a.ui-corner-all:hover {
+          background-color: #f5f5f5; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker-prev {
+        -webkit-mask-image: url("../svg/left.svg");
+        mask-image: url("../svg/left.svg");
+        right: 60px; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker-next {
+        -webkit-mask-image: url("../svg/right.svg");
+        mask-image: url("../svg/right.svg");
+        right: 15px; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker td {
+        padding: 5px 1px; }
+        .sidebar .widgets .grid #datepicker .ui-datepicker td a {
+          background: none;
+          border: 0;
+          display: block;
+          padding: 10px 1px;
+          border-radius: 100px;
+          text-decoration: none;
+          text-align: center;
+          font-family: "Geometria-Light";
+          color: #8a8a8a;
+          max-width: 40px;
+          margin: 0 auto; }
+          .sidebar .widgets .grid #datepicker .ui-datepicker td a:hover, .sidebar .widgets .grid #datepicker .ui-datepicker td a .ui-state-active, .sidebar .widgets .grid #datepicker .ui-datepicker td a .ui-state-hover {
+            background-color: #373737; }
+      .sidebar .widgets .grid #datepicker .ui-datepicker .ui-state-highlight {
+        background-color: #373737;
+        color: #8a8a8a; }
+    .sidebar .widgets .grid #datepicker thead {
+      display: none; }
   .sidebar .widgets .append-button {
     background-color: #2f4f7d;
     color: #fff;
@@ -764,6 +903,15 @@ body {
       top: 0.5vw; }
   .sidebar .tasks__button, .sidebar .question__button {
     text-align: center; }
+  .sidebar .weather .days {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: row !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
   .sidebar .colleague__title {
     padding: 8px 50px; }
     .sidebar .colleague__title::before {
@@ -784,7 +932,19 @@ body {
   .sidebar .question__inner {
     padding: 0 9vw; }
     .sidebar .question__inner .item {
-      margin-bottom: 15px; } }
+      margin-bottom: 15px; }
+
+  .ui-datepicker-title {
+    max-width: 100% !important; }
+
+  .ui-datepicker-header {
+    padding: 0.2vw 5vw !important; }
+
+  .ui-datepicker-prev {
+    right: 15vw; }
+
+  .ui-datepicker-next {
+    right: 4vw; } }
 @media screen and (max-width: 960px) {
   .header .nav .menu__item .link {
     font-size: 9px; }
@@ -803,4 +963,11 @@ body {
 
   #carousel .item .carousel-caption h3 {
     height: 6vw;
-    overflow: hidden; } }
+    overflow: hidden; }
+
+  .sidebar .weather .days {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
