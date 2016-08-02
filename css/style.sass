@@ -263,6 +263,9 @@ body
                 position: absolute
                 left: 0
                 top: 1px
+              &:hover
+                &::before
+                  background: url('../svg/heart-hover.svg')
             .views
               position: relative
               &::before
@@ -706,6 +709,13 @@ body
 
 
 
+
+@media screen and (max-width: 480px)
+
+  #carousel
+    .carousel-indicators
+      display: none
+
 @media screen and (max-width: 540px)
   .main
     .news__item
@@ -723,10 +733,6 @@ body
         .desc
           padding: 20px 0
           border-bottom: solid $gray 1px
-
-
-
-
 
 
 @media screen and (max-width: 767px)
@@ -800,7 +806,20 @@ body
       .menu__item
         .link
           font-size: 9px
-
+  #carousel
+    // .item
+    //   .carousel-caption
+    //     h3
+    //       height: 6vw
+    //       overflow: hidden
+    .carousel-indicators
+      margin-left: -40% !important
+      li
+        width: 4px !important
+        height: 4px !important
+      .active
+        width: 4.5px !important
+        height: 4.5px !important
 
 @media screen and (max-width: 1199px)
 
@@ -808,3 +827,9 @@ body
     .news
       &__item:nth-child(even)
         margin-top: 30px
+  #carousel
+    .item
+      .carousel-caption
+        h3
+          height: 6vw
+          overflow: hidden
