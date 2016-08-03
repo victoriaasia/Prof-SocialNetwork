@@ -17,6 +17,10 @@ body {
   background-color: #f5f5f5;
   font-family: sans-serif; }
 
+button {
+  border: 0;
+  outline: none; }
+
 .container {
   width: 100%;
   padding: 0 25px;
@@ -29,7 +33,8 @@ body {
     position: relative;
     z-index: 999; }
     .header__menu .navbar-toggle {
-      border-color: #97a5b7; }
+      border-color: #97a5b7;
+      margin-right: 23px; }
       .header__menu .navbar-toggle .icon-bar {
         background-color: #97a5b7; }
   .header .navbar {
@@ -168,6 +173,14 @@ body {
     margin-bottom: 35px; }
   .main .news__title {
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 85px 29px;
     font-family: "Geometria-Bold";
     color: #153259;
@@ -183,6 +196,24 @@ body {
       position: absolute;
       left: 41px;
       top: -5px; }
+    .main .news__title .tab-button {
+      display: inline-block;
+      margin-left: 7px; }
+    .main .news__title a {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background-size: contain; }
+    .main .news__title .list {
+      background-image: url("../svg/horizontal-lines.svg"); }
+    .main .news__title .round {
+      background-image: url("../svg/rounded-squares.svg"); }
+      .main .news__title .round:hover {
+        background-image: url("../svg/rounded-squares-h.svg"); }
+    .main .news__title .active .round {
+      background-image: url("../svg/rounded-squares-h.svg"); }
+    .main .news__title .active .list {
+      background-image: url("../svg/horizontal-lines-h.svg"); }
   .main .news__item {
     height: auto;
     overflow: hidden; }
@@ -266,6 +297,8 @@ body {
         clear: both;
         font-size: 0;
         overflow: hidden; }
+  .main .news #list-view .news__item {
+    margin-bottom: 20px; }
   .main .news__footer .more {
     padding: 20px 45px; }
     .main .news__footer .more button {
@@ -984,6 +1017,8 @@ body {
 @media screen and (max-width: 1199px) {
   .main .news__item:nth-child(even) {
     margin-top: 30px; }
+  .main .news .tab-button {
+    display: none; }
 
   #carousel .item .carousel-caption h3 {
     height: 6vw;

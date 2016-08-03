@@ -136,8 +136,14 @@
         </div>
         <div class="news">
           <div class="news__title">
-            Новости
+            <div>Новости</div>
+            <ul>
+            <li role="presentation" class="tab-button active"><a href="#round-view" class="round" aria-controls="round-view" role="tab" data-toggle="tab"></a></li>
+            <li role="presentation" class="tab-button"><a href="#list-view" class="list" aria-controls="list-view" role="tab" data-toggle="tab"></a></li>
+            </ul>
           </div>
+          <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="round-view">
           <div class="n-row row">
             <div class="col-12 col-lg-6 news__item">
               <div class="col-wrap1">
@@ -221,7 +227,104 @@
                 </div>
               </div>
             </div>
-          </div><!-- <div class="clearfix"></div> -->
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade in" id="list-view">
+        <div class="n-row row">
+          <div class="col-xs-12 news__item">
+            <div class="col-wrap1">
+              <div class="col-wrap2">
+                <div class="img"><img alt="" src="img/2.png"></div>
+                <div class="desc">
+                  <a class="title" href="#">
+                  <div class="date">
+                    Сегодня в 14:00
+                  </div>
+                  <div class="">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Океана моей силуэт заголовок имеет, безорфографичный всемогущая прямо даже о, свою решила инициал грустный ее, дороге великий мир семь там?
+                  </div></a>
+                  <div class="social">
+                    <a class="likes" href="#"><span>10</span></a> <a class="views" href="#"><span>340</span></a>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 news__item">
+            <div class="col-wrap1">
+              <div class="col-wrap2">
+                <div class="img"><img alt="" src="img/1.jpg"></div>
+                <div class="desc">
+                  <a class="title" href="#">
+                  <div class="date">
+                    Сегодня в 14:00
+                  </div>
+                  <div class="">
+                    Поездка на экскурсию в город Санкт-Петербург
+                  </div></a>
+                  <div class="social">
+                    <a class="likes" href="#"><span>1770</span></a> <a class="views" href="#"><span>370</span></a>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xs-12 news__item">
+            <div class="col-wrap1">
+              <div class="col-wrap2">
+                <div class="img"><img alt="" src="img/2.png"></div>
+                <div class="desc">
+                  <a class="title" href="#">
+                  <div class="date">
+                    Сегодня в 14:00
+                  </div>
+                  <div class="">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Океана моей силуэт заголовок имеет, безорфографичный всемогущая прямо даже о, свою решила инициал грустный ее, дороге великий мир семь там?
+                  </div></a>
+                  <div class="social">
+                    <a class="likes" href="#"><span>10</span></a> <a class="views" href="#"><span>340</span></a>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 news__item">
+            <div class="col-wrap1">
+              <div class="col-wrap2">
+                <div class="img"><img alt="" src="img/1.jpg"></div>
+                <div class="desc">
+                  <a class="title" href="#">
+                  <div class="date">
+                    Сегодня в 14:00
+                  </div>
+                  <div class="">
+                    Поездка на экскурсию в город Санкт-Петербург
+                  </div></a>
+                  <div class="social">
+                    <a class="likes" href="#"><span>1770</span></a> <a class="views" href="#"><span>370</span></a>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+</div>
+
+
+
+</div>
+
           <div class="news__footer">
             <div class="more">
               <button>Показать еще новости</button>
@@ -404,6 +507,12 @@
     <script src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/locales/datepicker.ru.js" charset="UTF-8"></script>
     <script src="js/script.js" type="text/javascript">
+    </script>
+    <script>
+    $('#Tabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
     </script>
 
 </body>

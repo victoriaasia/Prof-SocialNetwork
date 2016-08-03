@@ -4,6 +4,9 @@
 body
   background-color: $lightGray
   font-family: sans-serif
+button
+  border: 0
+  outline: none
 .container
   width: 100%
   padding: 0 25px
@@ -16,6 +19,7 @@ body
     z-index: 999
     .navbar-toggle
       border-color: $paleBlue
+      margin-right: 23px
       .icon-bar
         background-color: $paleBlue
   .navbar
@@ -189,6 +193,8 @@ body
       margin-bottom: 35px
     &__title
       position: relative
+      display: flex
+      justify-content: space-between
       padding: 0 85px 29px
       font-family: 'Geometria-Bold'
       color: $midBlue
@@ -204,6 +210,26 @@ body
         position: absolute
         left: 41px
         top: -5px
+      .tab-button
+        display: inline-block
+        margin-left: 7px
+      a
+        width: 20px
+        height: 20px
+        display: inline-block
+        background-size: contain
+      .list
+        background-image: url("../svg/horizontal-lines.svg")
+      .round
+        background-image: url("../svg/rounded-squares.svg")
+        &:hover
+          background-image: url("../svg/rounded-squares-h.svg")
+      .active
+        .round
+          background-image: url("../svg/rounded-squares-h.svg")
+        .list
+          background-image: url("../svg/horizontal-lines-h.svg")
+
     &__item
       height: auto
       overflow: hidden
@@ -285,12 +311,15 @@ body
                 &::before
                   background: url('../svg/views-hover.svg')
                   background-repeat: no-repeat
-
-
         .clear
           clear: both
           font-size: 0
           overflow: hidden
+
+    #list-view
+      .news__item
+        margin-bottom: 20px
+
     &__footer
       .more
         padding: 20px 45px
@@ -1011,6 +1040,8 @@ body
     .news
       &__item:nth-child(even)
         margin-top: 30px
+      .tab-button
+        display: none
   #carousel
     .item
       .carousel-caption
